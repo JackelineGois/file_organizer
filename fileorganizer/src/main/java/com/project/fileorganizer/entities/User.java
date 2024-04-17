@@ -1,7 +1,10 @@
 package com.project.fileorganizer.entities;
 
+import com.project.fileorganizer.enums.LevelEducation;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -35,4 +38,8 @@ public class User {
 
   @Column(name = "password")
   private String password;
+
+  @Column(name = "level_education")
+  @Enumerated(value = EnumType.STRING)
+  private LevelEducation levelEducation;
 }
